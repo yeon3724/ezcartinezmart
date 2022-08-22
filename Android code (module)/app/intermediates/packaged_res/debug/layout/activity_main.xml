@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="로그아웃"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_txt" />
+
+    <ListView
+        android:id="@+id/buy_list"
+        android:layout_width="775dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/pay_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_txt1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/product_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="88dp"
+        android:text="나의 구매 목록"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="40dp"
+        android:text="총 결제 금액 : "
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/payall_txt"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/payall_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="40dp"
+        android:text="100,000 원"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pay_btn" />
+
+    <TextView
+        android:id="@+id/reco_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="60dp"
+        android:text="추천 상품"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:text="user님 EZ-MART에 오신 것을 환영합니다!"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ad_list"
+        android:layout_width="210dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/call_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buy_list"
+        app:layout_constraintTop_toBottomOf="@+id/reco_txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/call_btn"
+        android:layout_width="210dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="직원 호출"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="200dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="28dp"
+        android:text="결제하기"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/product_txt3"
+        android:layout_width="89dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="할인률 :"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/payall_txt"
+        app:layout_constraintEnd_toEndOf="@+id/payall_txt"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="@+id/payall_txt" />
+
+    <TextView
+        android:id="@+id/product_txt4"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:gravity="center|right"
+        android:text="0 %"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_txt3"
+        app:layout_constraintEnd_toEndOf="@+id/payall_txt"
+        app:layout_constraintStart_toEndOf="@+id/product_txt3"
+        app:layout_constraintTop_toTopOf="@+id/product_txt3" />
+
+    <TextView
+        android:id="@+id/leading_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="18dp"
+        android:text="정렬된 순서대로 구매하시면 자동으로 가장 빠른 최적의 동선으로 안내됩니다."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/buy_list"
+        app:layout_constraintStart_toEndOf="@+id/product_txt1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
