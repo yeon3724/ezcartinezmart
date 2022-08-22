@@ -1,0 +1,304 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/7.2/firebase.js"></script>
+</head>
+
+<body>
+
+    <p style="text-align: center; font-size: large;">EZ-MART 고객 응대 시스템</p>
+
+    <div style="width: 604; margin: auto;">
+
+        <div style="float: left; width: 150; padding-left: 1px; background: ghostwhite;">
+            <p style="text-align: center; font-size: small; color: gray;">1번</p>
+            <p id="pretxt1" style="text-align: center; font-size: medium; color: white; background-color: dimgrey;"></p>
+            <p id="ViewTimer1" style="text-align: center; font-size: small; vertical-align: super;"></p>
+            <p id="customerLocation1"
+                style="text-align: center; font-size: xx-large; color: white; background-color: #20B2AA;"></p>
+            <p style="text-align: center;"><button type="button" onclick="Fire_write1()">대응 완료</button></p>
+        </div>
+
+        <div style="float: left; width: 150; padding-left: 1px; background: ghostwhite;">
+            <p style="text-align: center; font-size: small; color: gray;">2번</p>
+            <p id="pretxt2" style="text-align: center; font-size: medium; color: white; background-color: dimgrey;"></p>
+            <p id="ViewTimer2" style="text-align: center; font-size: small; vertical-align: super;"></p>
+            <p id="customerLocation2"
+                style="text-align: center; font-size: xx-large; color: white; background-color: #20B2AA;"></p>
+            <p style="text-align: center;"><button type="button" onclick="Fire_write2()">대응 완료</button></p>
+        </div>
+
+        <div style="float: left; width: 150; padding-left: 1px; background: ghostwhite;">
+            <p style="text-align: center; font-size: small; color: gray;">3번</p>
+            <p id="pretxt3" style="text-align: center; font-size: medium; color: white; background-color: dimgrey;"></p>
+            <p id="ViewTimer3" style="text-align: center; font-size: small; vertical-align: super;"></p>
+            <p id="customerLocation3"
+                style="text-align: center; font-size: xx-large; color: white; background-color: #20B2AA;"></p>
+            <p style="text-align: center;"><button type="button" onclick="Fire_write3()">대응 완료</button></p>
+        </div>
+
+        <div style="float: left; width: 150; padding-left: 1px; background: ghostwhite;">
+            <p style="text-align: center; font-size: small; color: gray;">4번</p>
+            <p id="pretxt4" style="text-align: center; font-size: medium; color: white; background-color: dimgrey;"></p>
+            <p id="ViewTimer4" style="text-align: center; font-size: small; vertical-align: super;"></p>
+            <p id="customerLocation4"
+                style="text-align: center; font-size: xx-large; color: white; background-color: #20B2AA;"></p>
+            <p style="text-align: center;"><button type="button" onclick="Fire_write4()">대응 완료</button></p>
+        </div>
+
+    </div>
+
+    <script>
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyBm25RICzOV66-CvMe7OrRu_wZSX8g61OU",
+            authDomain: "easycartinezmart.firebaseapp.com",
+            databaseURL: "https://easycartinezmart-default-rtdb.firebaseio.com",
+            projectId: "easycartinezmart",
+            storageBucket: "easycartinezmart.appspot.com",
+            messagingSenderId: "648315779059",
+            appId: "1:648315779059:web:8ae25089ac2caf7a854486",
+            measurementId: "G-J0VMKJ47PE"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        var apretxt1 = document.getElementById("pretxt1");
+        var apretxt2 = document.getElementById("pretxt2");
+        var apretxt3 = document.getElementById("pretxt3");
+        var apretxt4 = document.getElementById("pretxt4");
+        var aViewTimer1 = document.getElementById("ViewTimer1");
+        var aViewTimer2 = document.getElementById("ViewTimer2");
+        var aViewTimer3 = document.getElementById("ViewTimer3");
+        var aViewTimer4 = document.getElementById("ViewTimer4");
+        var acustomerLocation1 = document.getElementById("customerLocation1");
+        var acustomerLocation2 = document.getElementById("customerLocation2");
+        var acustomerLocation3 = document.getElementById("customerLocation3");
+        var acustomerLocation4 = document.getElementById("customerLocation4");
+        
+        ViewTimer1.innerText = "초기화";
+        ViewTimer2.innerText = "초기화";
+        ViewTimer3.innerText = "초기화";
+        ViewTimer4.innerText = "초기화";
+
+        var x1 = "";
+        var x2 = "";
+        var x3 = "";
+        var x4 = "";
+
+        var time1 = 0;
+        var time2 = 0;
+        var time3 = 0;
+        var time4 = 0;
+        var min1 = "";
+        var min2 = "";
+        var min3 = "";
+        var min4 = "";
+        var sec1 = "";
+        var sec2 = "";
+        var sec3 = "";
+        var sec4 = "";
+        var togle1 = 0;
+        var togle2 = 0;
+        var togle3 = 0;
+        var togle4 = 0;
+
+        var dbRef = firebase.database().ref().child("call");
+        dbRef.on('value', snap => demo.innerHTML = snap.val());
+        dbRef.on('value', snap => {
+            var calltxt = JSON.stringify(snap.val(), null, 3);
+
+            calltxt = calltxt.split("\"");
+            calltxt1 = calltxt[3].split(",");
+            calltxt2 = calltxt[7].split(",");
+            calltxt3 = calltxt[11].split(",");
+            calltxt4 = calltxt[15].split(",");
+            acustomerLocation1.innerText = calltxt1[0];
+            acustomerLocation2.innerText = calltxt2[0];
+            acustomerLocation3.innerText = calltxt3[0];
+            acustomerLocation4.innerText = calltxt4[0];
+            apretxt1.innerText = calltxt1[1];
+            apretxt2.innerText = calltxt2[1];
+            apretxt3.innerText = calltxt3[1];
+            apretxt4.innerText = calltxt4[1];
+            var timerset1 = calltxt1[2];
+            var timerset2 = calltxt2[2];
+            var timerset3 = calltxt3[2];
+            var timerset4 = calltxt4[2];
+
+            var dbRefObject = firebase.database().ref();
+
+            if (timerset1 == "1" && togle1 == 0) {
+                togle1 = 1;
+                x1 = setInterval(function () {
+                    document.getElementById('customerLocation1').style.backgroundColor = '#DC143C';
+                    min1 = parseInt(time1 / 60);
+                    sec1 = time1 % 60;
+                    if (time1 > 180) {
+                        document.getElementById('ViewTimer1').style.color = '#ff0000';
+                    }
+                    if (min1 == 0) {
+                        document.getElementById("ViewTimer1").innerHTML = sec1 + "초 경과";
+                    } else {
+                        document.getElementById("ViewTimer1").innerHTML = min1 + "분 " + sec1 + "초 경과";
+                    }
+                    time1++;
+                }, 1000);
+            } else if (timerset1 == "0") {
+                time1 = 0;
+                min1 = 0;
+                sec1 = 0;
+                clearInterval(x1);
+                document.getElementById("ViewTimer1").innerHTML = "초기화";
+            } else if (timerset1 == "2") {
+                clearInterval(x1);
+                dbRefObject.child("call").child("module20001").set("대기중,대기,0");
+                document.getElementById("ViewTimer1").innerHTML = "초기화";
+                document.getElementById('customerLocation1').style.backgroundColor = '#20B2AA';
+                document.getElementById('ViewTimer1').style.color = '#000000';
+                time1 = 0;
+                min1 = 0;
+                sec1 = 0;
+                togle1 = 0;
+            } else {}
+
+            if (timerset2 == "1" && togle2 == 0) {
+                togle2 = 1;
+                x2 = setInterval(function () {
+                    document.getElementById('customerLocation2').style.backgroundColor = '#DC143C';
+                    min2 = parseInt(time2 / 60);
+                    sec2 = time2 % 60;
+                    if (time2 > 180) {
+                        document.getElementById('ViewTimer2').style.color = '#ff0000';
+                    }
+                    if (min2 == 0) {
+                        document.getElementById("ViewTimer2").innerHTML = sec2 + "초 경과";
+                    } else {
+                        document.getElementById("ViewTimer2").innerHTML = min2 + "분 " + sec2 + "초 경과";
+                    }
+                    time2++;
+                }, 1000);
+            } else if (timerset2 == "0") {
+                time2 = 0;
+                min2 = 0;
+                sec2 = 0;
+                clearInterval(x2);
+                document.getElementById("ViewTimer2").innerHTML = "초기화";
+            } else if (timerset2 == "2") {
+                clearInterval(x2);
+                dbRefObject.child("call").child("module20002").set("대기중,대기,0");
+                document.getElementById("ViewTimer2").innerHTML = "초기화";
+                document.getElementById('customerLocation2').style.backgroundColor = '#20B2AA';
+                document.getElementById('ViewTimer2').style.color = '#000000';
+                togle2 = 0;
+                time2 = 0;
+                min2 = 0;
+                sec2 = 0;
+            } else {}
+
+            if (timerset3 == "1" && togle3 == 0) {
+                togle3 = 1;
+                x3 = setInterval(function () {
+                    document.getElementById('customerLocation3').style.backgroundColor = '#DC143C';
+                    min3 = parseInt(time3 / 60);
+                    sec3 = time3 % 60;
+                    if (time3 > 180) {
+                        document.getElementById('ViewTimer3').style.color = '#ff0000';
+                    }
+                    if (min3 == 0) {
+                        document.getElementById("ViewTimer3").innerHTML = sec3 + "초 경과";
+                    } else {
+                        document.getElementById("ViewTimer3").innerHTML = min3 + "분 " + sec3 + "초 경과";
+                    }
+                    time3++;
+                }, 1000);
+            } else if (timerset3 == "0") {
+                time3 = 0;
+                min3 = 0;
+                sec3 = 0;
+                clearInterval(x3);
+                document.getElementById("ViewTimer3").innerHTML = "초기화";
+            } else if (timerset3 == "2") {
+                clearInterval(x3);
+                dbRefObject.child("call").child("module20003").set("대기중,대기,0");
+                document.getElementById("ViewTimer3").innerHTML = "초기화";
+                document.getElementById('customerLocation3').style.backgroundColor = '#20B2AA';
+                document.getElementById('ViewTimer3').style.color = '#000000';
+                time3 = 0;
+                min3 = 0;
+                sec3 = 0;
+                togle3 = 0;
+            } else {}
+
+            if (timerset4 == "1" && togle4 == 0) {
+                togle4 = 1;
+                x4 = setInterval(function () {
+                    document.getElementById('customerLocation4').style.backgroundColor = '#DC143C';
+                    min4 = parseInt(time4 / 60);
+                    sec4 = time4 % 60;
+                    if (time4 > 180) {
+                        document.getElementById('ViewTimer4').style.color = '#ff0000';
+                    }
+                    if (min4 == 0) {
+                        document.getElementById("ViewTimer4").innerHTML = sec4 + "초 경과";
+                    } else {
+                        document.getElementById("ViewTimer4").innerHTML = min4 + "분 " + sec4 + "초 경과";
+                    }
+                    time4++;
+                }, 1000);
+            } else if (timerset4 == "0") {
+                time4 = 0;
+                min4 = 0;
+                sec4 = 0;
+                clearInterval(x4);
+                document.getElementById("ViewTimer4").innerHTML = "초기화";
+            } else if (timerset4 == "2") {
+                clearInterval(x4);
+                dbRefObject.child("call").child("module20004").set("대기중,대기,0");
+                document.getElementById("ViewTimer4").innerHTML = "초기화";
+                document.getElementById('customerLocation4').style.backgroundColor = '#20B2AA';
+                document.getElementById('ViewTimer4').style.color = '#000000';
+                togle4 = 0;
+                time4 = 0;
+                min4 = 0;
+                sec4 = 0;
+            } else {}
+
+        });
+
+    </script>
+
+    <script>
+        function Fire_write1() {
+            var dbRefObject = firebase.database().ref();
+            dbRefObject.child("call").child("module20001").set("대기중,대기,0");
+            document.getElementById('customerLocation1').style.backgroundColor = '#20B2AA';
+            document.getElementById('ViewTimer1').style.color = '#000000';
+            togle1 = 0;
+        }
+        function Fire_write2() {
+            var dbRefObject = firebase.database().ref();
+            dbRefObject.child("call").child("module20002").set("대기중,대기,0");
+            document.getElementById('customerLocation2').style.backgroundColor = '#20B2AA';
+            document.getElementById('ViewTimer2').style.color = '#000000';
+            togle2 = 0;
+        }
+        function Fire_write3() {
+            var dbRefObject = firebase.database().ref();
+            dbRefObject.child("call").child("module20003").set("대기중,대기,0");
+            document.getElementById('customerLocation3').style.backgroundColor = '#20B2AA';
+            document.getElementById('ViewTimer3').style.color = '#000000';
+            togle3 = 0;
+        }
+        function Fire_write4() {
+            var dbRefObject = firebase.database().ref();
+            dbRefObject.child("call").child("module20004").set("대기중,대기,0");
+            document.getElementById('customerLocation4').style.backgroundColor = '#20B2AA';
+            document.getElementById('ViewTimer4').style.color = '#000000';
+            togle4 = 0;
+        }
+    </script>
+
+</body>
+
+</html>
