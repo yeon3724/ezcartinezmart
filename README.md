@@ -33,6 +33,10 @@ IoT 기반 무인 결제 디스플레이 모듈 <이지카트> <br>
  1. 상품 안내 페이지 <br>
  2. 마트 관리, 카트 관리, 사고 관리 모니터링 대시보드 페이지 <br>
 
+# 유스케이스 다이어그램
+
+![image](https://user-images.githubusercontent.com/104811285/185820548-875cde98-ec08-43fe-8e97-678cf4567ded.png)
+
 # 개발 일정
 
 ![image](https://user-images.githubusercontent.com/104811285/185820131-4cfc69fa-3db7-4fa0-a011-a78e52341c2e.png)
