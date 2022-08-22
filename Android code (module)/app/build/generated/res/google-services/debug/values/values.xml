@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://easycartinezmart-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">648315779059</string>
+    <string name="google_api_key" translatable="false">AIzaSyAQUJRFba7bDtwKOyrRAXKadW3zkB-zrCU</string>
+    <string name="google_app_id" translatable="false">1:648315779059:android:23f287696f603a50854486</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAQUJRFba7bDtwKOyrRAXKadW3zkB-zrCU</string>
+    <string name="google_storage_bucket" translatable="false">easycartinezmart.appspot.com</string>
+    <string name="project_id" translatable="false">easycartinezmart</string>
+</resources>
