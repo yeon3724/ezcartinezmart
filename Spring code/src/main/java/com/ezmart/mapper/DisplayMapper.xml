@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezmart.mapper.DisplayMapper">
+    
+    
+    
+    <select id="displaylist" resultType="com.ezmart.domain.tbl_basketall">
+      select m.mb_id, p.p_seq, p.p_price, p.p_image, p.p_name, p.p_cate, p.p_sort, b.b_seq, p.p_seq, b.b_date, b.b_check, b.b_amount
+      from tbl_member m, tbl_product p, tbl_basket b
+      where p.p_seq = b.p_seq
+         and m.mb_id = b.mb_id
+         and m.mb_id = #{mb_id}
+    </select>
+    
+
+    <!-- 결제한 상품 장바구니 목록에서 구매(b_check = 1)로 상태 변경하기 -->
+    <update id="updateBasketCheck">
+    	update tbl_basket set b_check = 1 where mb_id = #{mb_id} and p_seq in (select p_seq from tbl_buy_detail where buy_seq = #{buy_seq})
+    </update>
+    
+    <!-- 구매 목록 추가하기 -->
+    <insert id="insertBuy" parameterType="com.ezmart.domain.tbl_buy">
+        insert into tbl_buy 
+        values (tbl_buy_SEQ.NEXTVAL, #{buy_total}, to_date(sysdate, 'yyyy.mm.dd hh24:mi'), #{mb_id}, #{buy_discount}, #{pay_amount}, #{pay_method}, 'y')
+    </insert>
+    
+    <!-- 구매 목록 최근 이력 조회 -->
+    <select id="recodeBuy" parameterType="com.ezmart.domain.tbl_buy_real" resultType="com.ezmart.domain.tbl_buy_real">
+        select * from tbl_buy where buy_date = (select max(buy_date) from tbl_buy where mb_id = #{mb_id}) and mb_id=#{mb_id}
+    </select>
+    
+    <!-- 상품 번호 조회 -->
+    <select id="numInquire" parameterType="String" resultType="com.ezmart.domain.tbl_product">
+        select * from tbl_product where p_barcode = #{p_barcode}
+    </select>
+    
+    <!-- 상품 디테일 DB 삽입 -->
+    <insert id="insertDetail" parameterType="com.ezmart.domain.tbl_buy_detail">
+        insert into tbl_buy_detail(buy_seq, p_seq, bd_cnt, bd_date) values(#{buy_seq}, #{p_seq}, #{bd_cnt}, sysdate)
+    </insert>
+    
+    <!-- 구매 정보 DB 삽입 -->
+    <insert id="insertBuyInfo" parameterType="com.ezmart.domain.tbl_buy_real">
+        insert into tbl_buy(buy_total, buy_date, mb_id, buy_discount, pay_amount, pay_method, pay_yn) values(#{buy_total}, sysdate, #{mb_id}, #{buy_discount}, #{pay_amount}, #{pay_method}, #{pay_yn})
+    </insert>
+    
+    
+    
+</mapper>

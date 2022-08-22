@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezmart.mapper.EzMartMapper">
+    
+    <!-- 회원가입 -->
+    <insert id="memberJoin" parameterType="com.ezmart.domain.MemberVO">
+     insert into tbl_member
+        values(#{mb_id}, #{mb_pw}, #{mb_name}, #{mb_nick}, #{mb_email}, #{mb_phone}, 2 , #{mb_cardnum})
+    </insert>
+    
+    
+    <!-- 로그인 --> 
+    <select id="memberLogin" parameterType="com.ezmart.domain.MemberVO" resultType="com.ezmart.domain.MemberVO">
+      select * from tbl_member where mb_id = #{mb_id} and mb_pw = #{mb_pw}
+   	</select>
+   
+    
+    <!-- 상품리스트 -->
+    <select id="productList" resultType="com.ezmart.domain.tbl_product">
+         select * from tbl_product 
+    </select>
+    
+    <!-- 상품리스트 - 카테고리별 -->
+    <select id="catelist" resultType="com.ezmart.domain.tbl_product">
+        select * from tbl_product where p_sort = #{p_sort}
+    </select>
+    
+    <!-- 바코드로 상품정보 가져오기 -->
+    <select id="getproduct" resultType="com.ezmart.domain.tbl_product">
+      select * from tbl_product where p_barcode = #{p_barcode}
+    </select>
+
+    
+    <!-- 상품 검색하기 -->
+    <select id="productSearch" resultType="com.ezmart.domain.tbl_product">
+        select * from tbl_product where p_name like #{search}
+    </select>
+    
+    
+    <!-- 1. 장바구니 추가 -->
+    <insert id="insertbasket" parameterType="com.ezmart.domain.tbl_basket">
+        insert into tbl_basket values (tbl_basket_SEQ.NEXTVAL, #{p_seq}, to_date(sysdate,'yyyy.mm.dd hh24:mi'), #{mb_id},'2',1)
+    </insert>
+    
+    
+    <!-- 2. 장바구니 목록(1. 아이디 기준으로 가져오기, 2. 구매한 상품은 장바구니에서 제외시키기) -->
+    <select id="basketlist" resultType="com.ezmart.domain.tbl_basketall">
+      select m.mb_id, p.p_seq, p.p_price, p.p_image, p.p_name, p.p_cate, p.p_sort, b.b_seq, p.p_seq, b.b_date, b.b_check, b.b_amount, p.p_barcode
+      from tbl_member m, tbl_product p, tbl_basket b
+      where p.p_seq = b.p_seq
+         and m.mb_id = b.mb_id
+         and b.b_check = 2
+         and m.mb_id = #{mb_id}
+    </select>
+
+    
+    
+    <!-- 3. 장바구니 내용 삭제(장바구니 시퀀스 번호 기준으로 삭제하기) -->
+    <delete id="basketdelete">
+        delete from tbl_basket where b_seq = #{b_seq}
+    </delete>
+    
+    
+    <!-- 구매내역 리스트 -->
+	<select id="buylist" resultType="com.ezmart.domain.tbl_buy">
+		select d.bd_seq, d.p_seq, p.p_name, p.p_seq, p.p_cate, p.p_image, b.buy_discount, b.buy_total, b.pay_amount, b.pay_method, b.buy_date, b.mb_id
+		from tbl_buy_detail d, tbl_product p, tbl_buy b
+		where d.p_seq = p.p_seq
+		    and b.buy_seq = d.buy_seq
+			and b.mb_id = #{mb_id}    
+		order by b.buy_date desc  
+    </select>
+    
+    
+</mapper>
