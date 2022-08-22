@@ -1,0 +1,226 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ezmart.ezcart"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="30"
+8-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:6:22-64
+12
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-database:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\6b25239c94e176702af97081a24bac05\transformed\firebase-database-20.0.5\AndroidManifest.xml:25:5-79
+15-->[com.google.firebase:firebase-database:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\6b25239c94e176702af97081a24bac05\transformed\firebase-database-20.0.5\AndroidManifest.xml:25:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:5-68
+16-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:24:22-65
+17    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+17-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:5-79
+17-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:25:22-76
+18    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+18-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:5-110
+18-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:26:22-107
+19
+20    <application
+20-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:8:5-43:19
+21        android:allowBackup="true"
+21-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.7.0] C:\Users\SMHRD\.gradle\caches\transforms-3\c395e7e1015ee83acecf070a1d54b71a\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:10:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:11:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:12:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:13:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:14:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:15:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.Easycart20001"
+32-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:17:9-51
+33        android:usesCleartextTraffic="true" >
+33-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:16:9-44
+34        <activity
+34-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:19:9-21:40
+35            android:name="com.ezmart.ezmart_module.MainActivity_Ad"
+35-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:20:13-44
+36            android:exported="false" />
+36-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:21:13-37
+37        <activity
+37-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:22:9-24:40
+38            android:name="com.ezmart.ezmart_module.MainActivity_Main"
+38-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:23:13-46
+39            android:exported="false" />
+39-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:24:13-37
+40        <activity
+40-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:25:9-27:40
+41            android:name="com.ezmart.ezmart_module.MainActivity_Pay"
+41-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:26:13-45
+42            android:exported="false" />
+42-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:27:13-37
+43        <activity
+43-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:28:9-30:40
+44            android:name="com.ezmart.ezmart_module.MainActivity_Wait"
+44-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:29:13-46
+45            android:exported="false" />
+45-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:30:13-37
+46        <activity
+46-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:31:9-33:40
+47            android:name="com.ezmart.ezmart_module.MainActivity_Call"
+47-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:32:13-46
+48            android:exported="false" />
+48-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:33:13-37
+49        <activity
+49-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:34:9-42:20
+50            android:name="com.ezmart.ezmart_module.MainActivity_StandByScreen"
+50-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:35:13-55
+51            android:exported="true" >
+51-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:36:13-36
+52            <intent-filter>
+52-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:37:13-41:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:38:17-69
+53-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:38:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:40:17-77
+55-->C:\Users\SMHRD\AndroidStudioProjects\easycart20001\easycart20003\app\src\main\AndroidManifest.xml:40:27-74
+56            </intent-filter>
+57        </activity>
+58
+59        <service
+59-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:12:9-18:19
+60            android:name="com.google.firebase.components.ComponentDiscoveryService"
+60-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:13:13-84
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+62            android:exported="false" >
+62-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:14:13-37
+63            <meta-data
+63-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:15:13-17:85
+64                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+64-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:16:17-124
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.firebase:firebase-database-ktx:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\5787b500741eb8f892c0a22f1746cbb4\transformed\firebase-database-ktx-20.0.5\AndroidManifest.xml:17:17-82
+66            <meta-data
+66-->[com.google.firebase:firebase-database:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\6b25239c94e176702af97081a24bac05\transformed\firebase-database-20.0.5\AndroidManifest.xml:32:13-34:85
+67                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+67-->[com.google.firebase:firebase-database:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\6b25239c94e176702af97081a24bac05\transformed\firebase-database-20.0.5\AndroidManifest.xml:33:17-109
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[com.google.firebase:firebase-database:20.0.5] C:\Users\SMHRD\.gradle\caches\transforms-3\6b25239c94e176702af97081a24bac05\transformed\firebase-database-20.0.5\AndroidManifest.xml:34:17-82
+69            <meta-data
+69-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\259463e62acb2e133ed69f3867005991\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:15:13-17:85
+70                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+70-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\259463e62acb2e133ed69f3867005991\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:16:17-113
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\259463e62acb2e133ed69f3867005991\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:17:17-82
+72            <meta-data
+72-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:31:13-33:85
+73                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+73-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:32:17-139
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\7c07f6476414b0a5c11467fff79a9093\transformed\play-services-measurement-api-21.1.0\AndroidManifest.xml:33:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\a2909c78989c0435de1c9f1427d854a0\transformed\firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+76                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+76-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\a2909c78989c0435de1c9f1427d854a0\transformed\firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\a2909c78989c0435de1c9f1427d854a0\transformed\firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+78        </service>
+79
+80        <provider
+80-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+81            android:name="com.google.firebase.provider.FirebaseInitProvider"
+81-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+82            android:authorities="com.ezmart.ezcart.firebaseinitprovider"
+82-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+83            android:directBootAware="true"
+83-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+84            android:exported="false"
+84-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+85            android:initOrder="100" />
+85-->[com.google.firebase:firebase-common:20.1.1] C:\Users\SMHRD\.gradle\caches\transforms-3\506696c26b4b3d384c45df172a53cf0f\transformed\firebase-common-20.1.1\AndroidManifest.xml:31:13-36
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\2e555aa60c2973d1a450e632503526ba\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\2e555aa60c2973d1a450e632503526ba\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\2e555aa60c2973d1a450e632503526ba\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\SMHRD\.gradle\caches\transforms-3\2e555aa60c2973d1a450e632503526ba\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+91
+92        <receiver
+92-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:29:9-33:20
+93            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+93-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:30:13-85
+94            android:enabled="true"
+94-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:31:13-35
+95            android:exported="false" >
+95-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:32:13-37
+96        </receiver>
+97
+98        <service
+98-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:35:9-38:40
+99            android:name="com.google.android.gms.measurement.AppMeasurementService"
+99-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:36:13-84
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:37:13-35
+101            android:exported="false" />
+101-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:38:13-37
+102        <service
+102-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:39:9-43:72
+103            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+103-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:40:13-87
+104            android:enabled="true"
+104-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:41:13-35
+105            android:exported="false"
+105-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:42:13-37
+106            android:permission="android.permission.BIND_JOB_SERVICE" />
+106-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\SMHRD\.gradle\caches\transforms-3\440df73af41fb929776c59f698ef31eb\transformed\play-services-measurement-21.1.0\AndroidManifest.xml:43:13-69
+107
+108        <meta-data
+108-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\49c827b69fa8a7f7c64c8edf0f9f028b\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+109            android:name="com.google.android.gms.version"
+109-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\49c827b69fa8a7f7c64c8edf0f9f028b\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+110            android:value="@integer/google_play_services_version" />
+110-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\49c827b69fa8a7f7c64c8edf0f9f028b\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+111
+112        <provider
+112-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+113            android:name="androidx.startup.InitializationProvider"
+113-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+114            android:authorities="com.ezmart.ezcart.androidx-startup"
+114-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+115            android:exported="false" >
+115-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+116            <meta-data
+116-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+117                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+117-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+118                android:value="androidx.startup" />
+118-->[androidx.emoji2:emoji2:1.0.0] C:\Users\SMHRD\.gradle\caches\transforms-3\f7fe229e2db298ac11bf7563144c1d40\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+119            <meta-data
+119-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\SMHRD\.gradle\caches\transforms-3\488f7c30a09a80966b1d0da3b7ccf544\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+120                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+120-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\SMHRD\.gradle\caches\transforms-3\488f7c30a09a80966b1d0da3b7ccf544\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+121                android:value="androidx.startup" />
+121-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\SMHRD\.gradle\caches\transforms-3\488f7c30a09a80966b1d0da3b7ccf544\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+122        </provider>
+123    </application>
+124
+125</manifest>
