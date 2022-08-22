@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "648315779059",
+    "firebase_url": "https://easycartinezmart-default-rtdb.firebaseio.com",
+    "project_id": "easycartinezmart",
+    "storage_bucket": "easycartinezmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648315779059:android:22387ce4d6ecc184854486",
+        "android_client_info": {
+          "package_name": "com.ezmart.easycart20001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQUJRFba7bDtwKOyrRAXKadW3zkB-zrCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648315779059:android:e193fdf9a769fcc0854486",
+        "android_client_info": {
+          "package_name": "com.ezmart.ezcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQUJRFba7bDtwKOyrRAXKadW3zkB-zrCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648315779059:android:fe79f0756f3d2a68854486",
+        "android_client_info": {
+          "package_name": "com.smhrd.ezmart_module"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQUJRFba7bDtwKOyrRAXKadW3zkB-zrCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648315779059-jad35136aoa42737u1a5r5j4hf6ja8mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

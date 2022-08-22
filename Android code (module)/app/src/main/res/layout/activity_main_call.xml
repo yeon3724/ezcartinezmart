@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_Call">
+
+    <RadioGroup
+        android:id="@+id/location_rgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/question2"
+        app:layout_constraintTop_toBottomOf="@+id/question2">
+
+        <RadioButton
+            android:id="@+id/location_btn01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="주류코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="가공코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="축산코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="음료코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수산코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="완구코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="과자코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="생활코너   " />
+
+        <RadioButton
+            android:id="@+id/location_btn09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="과일코너   " />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="182dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="30dp"
+        android:text="호출하기"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="182dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="36dp"
+        android:text="돌아가기"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_btn"
+        app:layout_constraintStart_toEndOf="@+id/submit_btn" />
+
+    <ImageView
+        android:id="@+id/help_img"
+        android:layout_width="400dp"
+        android:layout_height="372dp"
+        android:layout_marginStart="116dp"
+        app:layout_constraintStart_toEndOf="@+id/question1"
+        app:layout_constraintTop_toTopOf="@+id/question1"
+        app:srcCompat="@drawable/service" />
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="나의 현재 위치"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/help_rgroup"
+        app:layout_constraintTop_toBottomOf="@+id/help_rgroup" />
+
+    <RadioGroup
+        android:id="@+id/help_rgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/question1"
+        app:layout_constraintTop_toBottomOf="@+id/question1">
+
+        <RadioButton
+            android:id="@+id/help_btn01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="찾는 물건이 어디에 있는 지 모르겠어요." />
+
+        <RadioButton
+            android:id="@+id/help_btn02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="기기를 어떻게 사용하는 지 모르겠어요." />
+
+        <RadioButton
+            android:id="@+id/help_btn03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="기기 고장 신고 (결제 오류 등)" />
+
+        <RadioButton
+            android:id="@+id/help_btn04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="미아 신고" />
+
+        <RadioButton
+            android:id="@+id/help_btn05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="애완동물 신고" />
+
+        <RadioButton
+            android:id="@+id/help_btn06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="기타 문의" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="28dp"
+        android:text="무엇을 도와드릴까요?"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

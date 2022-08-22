@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_Wait">
+
+    <TextView
+        android:id="@+id/wait_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="안내 직원이 곧 도착합니다."
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/wait_txt1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/wait_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/wait_txt1" />
+
+    <TextView
+        android:id="@+id/wait_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="- 요청 완료 -"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wait_txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="잠시만 기다려주세요."
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="@+id/wait_txt2"
+        app:layout_constraintStart_toStartOf="@+id/wait_txt2"
+        app:layout_constraintTop_toBottomOf="@+id/wait_txt2" />
+
+    <Button
+        android:id="@+id/goon_btn"
+        android:layout_width="296dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="48dp"
+        android:text="근처에서 계속 쇼핑하기"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/wait_txt3"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/wait_txt3"
+        app:layout_constraintTop_toBottomOf="@+id/wait_txt3" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="150dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="28dp"
+        android:text="요청 취소"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/wait_txt3"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/wait_txt3"
+        app:layout_constraintTop_toBottomOf="@+id/goon_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
