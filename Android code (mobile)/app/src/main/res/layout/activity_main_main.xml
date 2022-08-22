@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F4ECCC"
+    tools:context=".MainActivity_Main">
+
+    <EditText
+        android:id="@+id/search_input_etxt"
+        android:layout_width="289dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="검색할 상품을 입력하세요."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_btn"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search_input_etxt"
+        app:layout_constraintStart_toEndOf="@+id/search_input_etxt"
+        app:layout_constraintTop_toTopOf="@+id/search_input_etxt"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+    <ImageView
+        android:id="@+id/img_nongsan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_meat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/img_fish"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_meat"
+        app:layout_constraintEnd_toStartOf="@+id/img_bev"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_meat"
+        app:layout_constraintTop_toTopOf="@+id/img_meat"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/fish" />
+
+    <ImageView
+        android:id="@+id/img_bev"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_fish"
+        app:layout_constraintEnd_toStartOf="@+id/img_coffee"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_fish"
+        app:layout_constraintTop_toTopOf="@+id/img_fish"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/dmafy" />
+
+    <ImageView
+        android:id="@+id/img_coffee"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_bev"
+        app:layout_constraintTop_toTopOf="@+id/img_bev"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/coffee" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="농산"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_nongsan" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="과자"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_snack" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="청소용품"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_clean" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="위생용품"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="주방용품"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="장난감"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="냉동·냉장"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="조미류"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="주류"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="욕실용품"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="축산"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="수산"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="음료"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="커피/차"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/img_snack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_naengdong"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/snack" />
+
+    <ImageView
+        android:id="@+id/img_naengdong"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_snack"
+        app:layout_constraintEnd_toStartOf="@+id/img_src"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_snack"
+        app:layout_constraintTop_toTopOf="@+id/img_snack"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/sodehd" />
+
+    <ImageView
+        android:id="@+id/img_src"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_naengdong"
+        app:layout_constraintEnd_toStartOf="@+id/img_alcohol"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_naengdong"
+        app:layout_constraintTop_toTopOf="@+id/img_naengdong"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/src" />
+
+    <ImageView
+        android:id="@+id/img_alcohol"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_src"
+        app:layout_constraintEnd_toStartOf="@+id/img_bath"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_src"
+        app:layout_constraintTop_toTopOf="@+id/img_src"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/alcohol" />
+
+    <ImageView
+        android:id="@+id/img_bath"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_alcohol"
+        app:layout_constraintTop_toTopOf="@+id/img_alcohol"
+        app:srcCompat="@drawable/bath" />
+
+    <ImageView
+        android:id="@+id/img_clean"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_wisaeng"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/clean" />
+
+    <ImageView
+        android:id="@+id/img_wisaeng"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_clean"
+        app:layout_constraintEnd_toStartOf="@+id/img_kitchen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_clean"
+        app:layout_constraintTop_toTopOf="@+id/img_clean"
+        app:srcCompat="@drawable/dnltod" />
+
+    <ImageView
+        android:id="@+id/img_kitchen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_wisaeng"
+        app:layout_constraintEnd_toStartOf="@+id/img_toy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_wisaeng"
+        app:layout_constraintTop_toTopOf="@+id/img_wisaeng"
+        app:srcCompat="@drawable/kitchen" />
+
+    <ImageView
+        android:id="@+id/img_toy"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_kitchen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_kitchen"
+        app:layout_constraintTop_toTopOf="@+id/img_kitchen"
+        app:srcCompat="@drawable/toy" />
+
+    <ImageView
+        android:id="@+id/img_meat"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_nongsan"
+        app:layout_constraintEnd_toStartOf="@+id/img_fish"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_nongsan"
+        app:layout_constraintTop_toTopOf="@+id/img_nongsan"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/meet" />
+
+    <ImageView
+        android:id="@+id/basket_btn"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="540dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basket" />
+
+    <ImageView
+        android:id="@+id/logout_btn"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qrcreate_btn"
+        app:layout_constraintStart_toEndOf="@+id/qrcreate_btn"
+        app:layout_constraintTop_toTopOf="@+id/qrcreate_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logout2" />
+
+    <ImageView
+        android:id="@+id/buyhistory_btn"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/basket_btn"
+        app:layout_constraintStart_toEndOf="@+id/basket_btn"
+        app:layout_constraintTop_toTopOf="@+id/basket_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/order" />
+
+    <ImageView
+        android:id="@+id/qrcreate_btn"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buyhistory_btn"
+        app:layout_constraintStart_toEndOf="@+id/buyhistory_btn"
+        app:layout_constraintTop_toTopOf="@+id/buyhistory_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/smartphone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/basket_name"
+        android:layout_width="266dp"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="상품제목"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/basket_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/basket_price"
+        android:layout_width="266dp"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="가격"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/basket_image"
+        app:layout_constraintTop_toBottomOf="@+id/basket_name" />
+
+    <TextView
+        android:id="@+id/product_cate"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:backgroundTint="#EFCC3D"
+        android:gravity="center"
+        android:text="카테고리"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/basket_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/basket_image"
+        android:layout_width="74dp"
+        android:layout_height="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/product_put_btn"
+        android:layout_width="69dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#b99b00"
+        android:text="담기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/basket_name"
+        app:layout_constraintTop_toBottomOf="@+id/product_cate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

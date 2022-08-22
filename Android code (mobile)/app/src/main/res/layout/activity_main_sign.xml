@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4ECCC"
+    tools:context=".MainActivity_Sign">
+
+    <Button
+        android:id="@+id/join_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_round"
+        android:text="아이디"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/join_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="비밀번호"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn2" />
+
+    <Button
+        android:id="@+id/join_btn8"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="카드번호"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn7"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn7" />
+
+    <EditText
+        android:id="@+id/nick_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="닉네임을 입력하세요."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/name_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/name_sign_etxt" />
+
+    <Button
+        android:id="@+id/join_btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="전화번호"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn6"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn6" />
+
+    <Button
+        android:id="@+id/join_btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="이름"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn3" />
+
+    <EditText
+        android:id="@+id/pw_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="비밀번호를 입력하세요."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/id_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/id_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/id_sign_etxt" />
+
+    <EditText
+        android:id="@+id/phone_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="전화번호를 입력하세요."
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/email_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/email_sign_etxt" />
+
+    <EditText
+        android:id="@+id/email_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="이메일을 입력하세요."
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/nick_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nick_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/nick_sign_etxt" />
+
+    <Button
+        android:id="@+id/join_btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="이메일"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn5"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn5" />
+
+    <EditText
+        android:id="@+id/name_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="이름을 입력하세요."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/pw_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pw_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/pw_sign_etxt" />
+
+    <EditText
+        android:id="@+id/card_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="카드번호를 입력하세요."
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/phone_sign_etxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phone_sign_etxt"
+        app:layout_constraintTop_toBottomOf="@+id/phone_sign_etxt" />
+
+    <Button
+        android:id="@+id/join_btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="닉네임"
+        app:layout_constraintEnd_toEndOf="@+id/join_btn4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/join_btn4"
+        app:layout_constraintTop_toBottomOf="@+id/join_btn4" />
+
+    <EditText
+        android:id="@+id/id_sign_etxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:hint="아이디를 입력하세요."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/join_btn2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/join_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/button_round"
+        android:text="가입"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

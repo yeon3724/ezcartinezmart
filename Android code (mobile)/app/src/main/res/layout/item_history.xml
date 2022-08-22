@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/history_name"
+        android:layout_width="355dp"
+        android:layout_height="34dp"
+        android:gravity="center_vertical"
+        android:text="상품제목"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/history_img"
+        app:layout_constraintTop_toBottomOf="@+id/history_date" />
+
+    <TextView
+        android:id="@+id/history_total"
+        android:layout_width="355dp"
+        android:layout_height="22dp"
+        android:gravity="center_vertical"
+        android:text="할인 + 가격"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/history_img"
+        app:layout_constraintTop_toBottomOf="@+id/history_name" />
+
+    <TextView
+        android:id="@+id/history_date"
+        android:layout_width="355dp"
+        android:layout_height="18dp"
+        android:gravity="center_vertical"
+        android:text="구입 날짜"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/history_cate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/history_cate"
+        android:layout_width="56dp"
+        android:layout_height="19dp"
+        android:background="#03A9F4"
+        android:backgroundTint="#EFCC3D"
+        android:gravity="center"
+        android:text="카테고리"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/history_img"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history_cate"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
